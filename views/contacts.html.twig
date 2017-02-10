@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Address Book</title>
+</head>
+<body>
+    <h1>Address Book</h1>
+    {% if contacts is not empty %}
+        <p>Here are all your contacts:</p>
+        <ul>
+            {% for contact in contacts %}
+                <li>{{ contact.getName }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form action='/create_contacts' method='post'>
+        <label for='name'> Name</label>
+        <input id='name' name='name' type='text'>
+
+        <button type='submit'>Submit</button>
+    </form>
+    <br>
+    <form action='/delete_contacts' method='post'>
+        <button type='submit'>Clear</button>
+    </form>
+</body>
+</html>
