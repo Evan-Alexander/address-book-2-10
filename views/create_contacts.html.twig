@@ -1,13 +1,16 @@
 <html>
 <head>
-    <title>Address Book</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" charset="utf-8">
+    <link href="{{ app.request.getbaseurl }}/assets/css/styles.css" rel="stylesheet" type="text/css">
+    <title>Address Book</title>
 </head>
 <body>
-    <h1>You created a contact!</h1>
-    <p>{{ newcontact.getName }}</p>
-    <p>{{ newcontact.getPhone }}</p>
-    <p>{{ newcontact.getAddress }}</p>
-    <p><a href='/'>View your contacts.</a></p>
+    <div class="container">
+        <h1>You created a contact!</h1>
+        <p>{{ newcontact.getName }}</p>
+        <p>{{ newcontact.getPhone }}</p>
+        <p>{{ newcontact.getAddress }}</p>
+        <p><a href='/'>View your contacts.</a></p>
+    </div>
 </body>
 </html>
