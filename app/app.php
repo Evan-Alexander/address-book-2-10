@@ -9,18 +9,23 @@
         $_SESSION['list_of_contacts'] = array();
     }
 
+    $app = new Silex\Application();
+
+
     $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'
     ));
 
-    $app->get('/', function() use ($app) {
+    $app['debug'] = true;
+
+    $app->get("/", function() use ($app) {
         return $app['twig']->render('contacts.html.twig', array('contacts' => Contact::getAll()));
     });
 
-    $app->post('/create_contacts', function() use ($app) {
+    $app->post("/create_contacts", function() use ($app) {
         $contact = new Contact($_POST['name']);
         $contact->save();
 
-        return $app['twig']->render('create_contacts.html.twig', array('newcontact') => $contact);
+        return $app['twig']->render('create_contacts.html.twig', array('newcontact' => $contact));
     });
 
     $app->post("/delete_contacts", function() use ($app) {
