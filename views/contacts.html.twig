@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Address Book</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" charset="utf-8">
 </head>
 <body>
     <h1>Address Book</h1>
@@ -9,6 +10,7 @@
         <ul>
             {% for contact in contacts %}
                 <li>{{ contact.getName }}</li>
+                <li>{{ contact.getPhone }}</li>
             {% endfor %}
         </ul>
     {% endif %}
@@ -16,6 +18,7 @@
     <form action='/create_contacts' method='post'>
         <label for='name'> Enter Name:</label>
         <input id='name' name='name' type='text'>
+        <br>
         <br>
         <label for='phone'> Enter Phone #:</label>
         <input id='phone' name='phone' type='text'>
