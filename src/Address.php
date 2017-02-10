@@ -2,11 +2,13 @@
     class Contact
         {
             private $name;
-            
+            private $phone;
 
-            function __construct($name)
+
+            function __construct($name, $phone)
             {
                 $this->name = $name;
+                $this->phone = $phone;
             }
 
             function setName($new_name)
@@ -15,6 +17,16 @@
             }
 
             function getName()
+            {
+                return $this->name;
+            }
+
+            function setPhone($new_phone)
+            {
+                $this->name = (string) $new_phone;
+            }
+
+            function getPhone()
             {
                 return $this->name;
             }
