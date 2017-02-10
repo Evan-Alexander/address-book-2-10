@@ -1,5 +1,5 @@
 body {
-    background-color: tomato;
+    background-color: rgb(222, 183, 88);
     background-image: url('../img/paper.jpg');
     background-repeat: no-repeat;
     background-position: center center;
@@ -15,7 +15,7 @@ body {
 }
 
 .form-control {
-    width: 30%
+    width: 33%
 }
 
 .show_contacts {
@@ -26,21 +26,19 @@ body {
 /***********
 BUTTONS
 ************/
+
+
+
 #clear {
-    position:absolute;
     transition: .5s ease;
-    top: 44%;
-    left: 22%;
 }
+
 #clear:hover {
     transform: scale(1.05);
 }
 
 #submit {
-    position:absolute;
     transition: .5s ease;
-    top: 44%;
-    left: 14%;
 }
 #submit:hover {
     transform: scale(1.05);
