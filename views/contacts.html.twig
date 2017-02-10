@@ -5,6 +5,23 @@
 </head>
 <body>
     <h1>Address Book</h1>
+
+
+    <form action='/create_contacts' method='post'>
+        <label for='name'> Enter Name:</label>
+        <input id='name' name='name' type='text'>
+        <br>
+        <br>
+        <label for='phone'> Enter Phone #:</label>
+        <input id='phone' name='phone' type='text'><br>
+
+        <button type='submit'>Submit</button>
+    </form>
+    <br>
+    <form action='/delete_contacts' method='post'>
+        <button type='submit'>Clear</button>
+    </form>
+
     {% if contacts is not empty %}
         <p>Here are all your contacts:</p>
         <ul>
@@ -14,20 +31,5 @@
             {% endfor %}
         </ul>
     {% endif %}
-
-    <form action='/create_contacts' method='post'>
-        <label for='name'> Enter Name:</label>
-        <input id='name' name='name' type='text'>
-        <br>
-        <br>
-        <label for='phone'> Enter Phone #:</label>
-        <input id='phone' name='phone' type='text'>
-
-        <button type='submit'>Submit</button>
-    </form>
-    <br>
-    <form action='/delete_contacts' method='post'>
-        <button type='submit'>Clear</button>
-    </form>
 </body>
 </html>

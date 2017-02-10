@@ -23,12 +23,12 @@
 
             function setPhone($new_phone)
             {
-                $this->name = (string) $new_phone;
+                $this->phone = (string) $new_phone;
             }
 
             function getPhone()
             {
-                return $this->name;
+                return $this->phone;
             }
 
             function save()
