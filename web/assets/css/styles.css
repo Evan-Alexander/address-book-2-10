@@ -5,13 +5,32 @@ body {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 2em;
 }
 
+.forms {
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.form-control {
+    width: 30%
+}
+
+.show_contacts {
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+/***********
+BUTTONS
+************/
 #clear {
     position:absolute;
     transition: .5s ease;
-    top: 23%;
-    left: 15%;
+    top: 44%;
+    left: 22%;
 }
 #clear:hover {
     transform: scale(1.05);
@@ -20,8 +39,8 @@ body {
 #submit {
     position:absolute;
     transition: .5s ease;
-    top: 23%;
-    left: 3%;
+    top: 44%;
+    left: 14%;
 }
 #submit:hover {
     transform: scale(1.05);
